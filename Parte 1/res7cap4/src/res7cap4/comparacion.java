@@ -9,11 +9,13 @@ public class comparacion {
         this.b = b;
     }
     
-    public double mayor(){
+    public String mayor(){
         if (a>b){
-            return a;
+            return "A es mayor que B";
+        } if (a==b){
+            return "A es igual a B";
         } else {
-            return b;
+            return "A es menor que B";
         }
     }
 }

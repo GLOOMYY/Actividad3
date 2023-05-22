@@ -124,9 +124,9 @@ public class interfaz extends javax.swing.JFrame {
         
         comparacion numeros = new comparacion(a,b);
         
-        double mayor = numeros.mayor();
+        String mayor = numeros.mayor();
         
-        txtMayor.setText(String.valueOf(mayor));
+        txtMayor.setText(mayor);
         
     }//GEN-LAST:event_calcularActionPerformed
 
