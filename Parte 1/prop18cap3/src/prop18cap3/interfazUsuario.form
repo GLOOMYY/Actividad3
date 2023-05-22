@@ -27,13 +27,195 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="460" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="calcular" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                      <Component id="borrar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="95" max="32767" attributes="0"/>
+                      <Component id="salir" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jLabel1" linkSize="1" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="jLabel2" linkSize="1" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="jLabel3" linkSize="1" alignment="0" min="-2" pref="144" max="-2" attributes="0"/>
+                          <Component id="jLabel4" linkSize="1" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                          <Component id="jLabel5" linkSize="1" alignment="0" min="-2" pref="148" max="-2" attributes="0"/>
+                          <Component id="jLabel6" linkSize="1" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                          <Component id="jLabel8" linkSize="1" alignment="0" min="-2" pref="112" max="-2" attributes="0"/>
+                          <Component id="jLabel9" linkSize="1" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                          <Component id="jLabel7" linkSize="1" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="txtSalNeto" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtSalBruto" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtNombreDos" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtCodigo" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtRetFuente" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtValorHora" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtHorasMes" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtNombre" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                          <Component id="txtCodigoEmpleado" linkSize="1" alignment="1" min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="378" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace pref="62" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel1" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="txtCodigoEmpleado" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" linkSize="2" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Component id="txtNombre" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" linkSize="2" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="txtHorasMes" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel4" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="txtValorHora" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel5" linkSize="2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtRetFuente" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel6" linkSize="2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="txtCodigo" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel8" linkSize="2" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                  <Component id="txtNombreDos" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel7" linkSize="2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="txtSalBruto" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel9" linkSize="2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="txtSalNeto" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="calcular" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="borrar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="salir" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo del Empleado"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombres"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Horas trabajadas al mes"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Valor de la hora"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Retencion en la fuente"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Codigo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salario Bruto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombres"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salario Neto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="calcular">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calcular"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calcularActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="borrar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Borrar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="borrarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="salir">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salir"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salirActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCodigoEmpleado">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNombre">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtHorasMes">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtValorHora">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtRetFuente">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCodigo">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNombreDos">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSalBruto">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSalNeto">
+    </Component>
+  </SubComponents>
 </Form>
