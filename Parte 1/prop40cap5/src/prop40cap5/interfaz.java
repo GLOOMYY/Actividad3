@@ -8,6 +8,10 @@ public class interfaz extends javax.swing.JFrame {
 
     public interfaz() {
         initComponents();
+        txtRaiz.setEditable(false);
+        txtCuadrado.setEditable(false);
+        txtCubo.setEditable(false);
+
         listModel = new DefaultListModel<>();
         listaNumeros.setModel(listModel);
     }

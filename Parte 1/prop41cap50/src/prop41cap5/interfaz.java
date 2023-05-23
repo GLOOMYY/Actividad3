@@ -1,5 +1,8 @@
-package prop40cap5;
+package prop41cap5;
 import javax.swing.DefaultListModel;
+import java.util.List;
+import java.util.ArrayList;
+
 
 
 public class interfaz extends javax.swing.JFrame {
@@ -8,6 +11,7 @@ public class interfaz extends javax.swing.JFrame {
 
     public interfaz() {
         initComponents();
+        txtMayor.setEditable(false);
         listModel = new DefaultListModel<>();
         listaNumeros.setModel(listModel);
     }
@@ -25,12 +29,8 @@ public class interfaz extends javax.swing.JFrame {
         limpiar = new javax.swing.JButton();
         salir = new javax.swing.JButton();
         agregar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        txtRaiz = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtCuadrado = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtCubo = new javax.swing.JTextField();
+        txtMayor = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,11 +66,7 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Raiz Cuadrada");
-
-        jLabel3.setText("Cuadrado");
-
-        jLabel4.setText("Cubo");
+        jLabel4.setText("Mayor");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,19 +95,9 @@ public class interfaz extends javax.swing.JFrame {
                                 .addComponent(salir))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(33, 33, 33)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtCubo, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txtRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMayor, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -124,18 +110,10 @@ public class interfaz extends javax.swing.JFrame {
                     .addComponent(agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCuadrado, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCubo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMayor, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(calcular)
@@ -152,26 +130,34 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_agregarActionPerformed
     
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
-        double raiz, cuadrado, cubo;
+    double mayor;
+    List<Double> numeros = new ArrayList<>();
+
+    DefaultListModel<String> model = (DefaultListModel<String>) listaNumeros.getModel();
+    
+    for (int i = 0; i < model.size(); i++) {
+        String elemento = model.getElementAt(i);
+        double numero = Double.parseDouble(elemento);
+        numeros.add(numero);
+    }
+    
+    List<String> elementosSeleccionados = listaNumeros.getSelectedValuesList();
+
+    for (String elemento : elementosSeleccionados) {
+        double numero = Double.parseDouble(elemento);
+        numeros.add(numero);
+    }
+
+    comparador mayores = new comparador(numeros);
         
-        elementoSeleccionado = listaNumeros.getSelectedValue();
+    mayor = mayores.mayor();
         
-        calculos numero = new calculos(Double.parseDouble(elementoSeleccionado));
-        
-        raiz = numero.raiz();
-        cuadrado = numero.cuadrado();
-        cubo = numero.cubo();
-        
-        txtRaiz.setText(String.valueOf(raiz));
-        txtCuadrado.setText(String.valueOf(cuadrado));
-        txtCubo.setText(String.valueOf(cubo));
+    txtMayor.setText(String.valueOf(mayor));
     }//GEN-LAST:event_calcularActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
         txtNumero.setText("");
-        txtRaiz.setText("");
-        txtCuadrado.setText("");
-        txtCubo.setText("");
+        txtMayor.setText("");
         listModel.clear();
     }//GEN-LAST:event_limpiarActionPerformed
 
@@ -202,6 +188,7 @@ public class interfaz extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -215,17 +202,13 @@ public class interfaz extends javax.swing.JFrame {
     private javax.swing.JButton agregar;
     private javax.swing.JButton calcular;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton limpiar;
     private javax.swing.JList<String> listaNumeros;
     private String elementoSeleccionado;
     private javax.swing.JButton salir;
-    private javax.swing.JTextField txtCuadrado;
-    private javax.swing.JTextField txtCubo;
+    private javax.swing.JTextField txtMayor;
     private javax.swing.JTextField txtNumero;
-    private javax.swing.JTextField txtRaiz;
     // End of variables declaration//GEN-END:variables
 }
